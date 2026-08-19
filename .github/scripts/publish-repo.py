@@ -224,9 +224,9 @@ for ext in final_extensions:
         "sources": [
             {
                 "name": src.name,
-                "lang": src.lang,
+                "lang": getattr(src, "language", lang),
                 "id": str(src.id),
-                "baseUrl": src.baseUrl,
+                "baseUrl": getattr(src, "homeUrl", ""),
             }
             for src in ext.sources
         ],
