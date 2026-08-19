@@ -234,8 +234,14 @@ for ext in final_extensions:
 with REPO_DIR.joinpath("index.min.json").open("w", encoding="utf-8") as f:
     json.dump(min_json_data, f, ensure_ascii=False, separators=(",", ":"))
 repo_meta = {
+    "meta": {
+        "name": "Sei",
+        "shortName": "Sei",
+        "website": "https://github.com/wdinrev/sei-source",
+        "signingKeyFingerprint": "c0756f0cbbd5755afa1fd08a4c1a0ef795deadf9abeb156cf091eced628989d6",
+    },
     "name": "Sei",
-    "shortName": "SEI",
+    "shortName": "Sei",
     "website": "https://github.com/wdinrev/sei-source",
     "signingKeyFingerprint": "c0756f0cbbd5755afa1fd08a4c1a0ef795deadf9abeb156cf091eced628989d6",
 }
