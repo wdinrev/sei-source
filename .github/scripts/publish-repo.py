@@ -188,7 +188,7 @@ final_extensions.sort(key=lambda ext: ext.packageName)
 
 index = index_pb2.Index(
     name="Sei",
-    badgeLabel="SEI",
+    badgeLabel="wdinrev-sei",
     signingKey="c0756f0cbbd5755afa1fd08a4c1a0ef795deadf9abeb156cf091eced628989d6",
     contact=index_pb2.Contact(
         website="https://github.com/wdinrev/sei-repo",
@@ -236,7 +236,7 @@ with REPO_DIR.joinpath("index.min.json").open("w", encoding="utf-8") as f:
 repo_meta = {
     "meta": {
         "name": "Sei",
-        "shortName": "Sei",
+        "shortName": "wdinrev-sei",
         "website": "https://github.com/wdinrev/sei-source",
         "signingKeyFingerprint": "c0756f0cbbd5755afa1fd08a4c1a0ef795deadf9abeb156cf091eced628989d6",
     }

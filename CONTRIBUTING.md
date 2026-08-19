@@ -1,4 +1,4 @@
-# ☄️ Panduan Kontribusi - Sei Extensions (靜)
+# Panduan Kontribusi - Sei (靜)
 
 Terima kasih atas minat Anda untuk berkontribusi pada Sei. Repositori ini khusus merawat dan mengembangkan ekstensi manga, manhwa, manhua, dan komik berbahasa Indonesia untuk Mihon, Tachiyomi, Komikku, dan Dantotsu.
 
