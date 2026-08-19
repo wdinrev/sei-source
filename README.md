@@ -2,9 +2,9 @@
 
 # 📖 Sei Extensions (靜)
 
-[![Install on Mihon](https://img.shields.io/badge/Install%20on-Mihon-2E7D32?style=for-the-badge&logo=android)](https://intradeus.github.io/http-protocol-redirector/?r=mihon://add-repo?url=https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.min.json)
-[![Install on Komikku](https://img.shields.io/badge/Install%20on-Komikku-1565C0?style=for-the-badge&logo=android)](https://intradeus.github.io/http-protocol-redirector/?r=komikku://add-repo?url=https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.min.json)
-[![Install on Tachiyomi](https://img.shields.io/badge/Install%20on-Tachiyomi-00838F?style=for-the-badge&logo=android)](https://intradeus.github.io/http-protocol-redirector/?r=tachiyomi://add-repo?url=https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.min.json)
+[![Install on Mihon](https://img.shields.io/badge/Install%20on-Mihon-2E7D32?style=for-the-badge&logo=android)](https://intradeus.github.io/http-protocol-redirector/?r=mihon://add-repo?url=https://raw.githubusercontent.com/wdinrev/sei-repo/main/index.min.json)
+[![Install on Komikku](https://img.shields.io/badge/Install%20on-Komikku-1565C0?style=for-the-badge&logo=android)](https://intradeus.github.io/http-protocol-redirector/?r=komikku://add-repo?url=https://raw.githubusercontent.com/wdinrev/sei-repo/main/index.min.json)
+[![Install on Tachiyomi](https://img.shields.io/badge/Install%20on-Tachiyomi-00838F?style=for-the-badge&logo=android)](https://intradeus.github.io/http-protocol-redirector/?r=tachiyomi://add-repo?url=https://raw.githubusercontent.com/wdinrev/sei-repo/main/index.min.json)
 [![CI](https://github.com/wdinrev/sei-source/actions/workflows/build_push.yml/badge.svg)](https://github.com/wdinrev/sei-source/actions/workflows/build_push.yml)
 
 **Katalog Repositori Ekstensi Manga / Manhwa / Doujin Khusus Bahasa Indonesia untuk Mihon, Tachiyomi, Komikku, & Dantotsu.**
@@ -23,11 +23,11 @@ Klik salah satu tombol badge di atas (*Install on Mihon*, *Komikku*, atau *Tachi
 ### Opsi 2: Manual (Salin URL)
 1. Buka aplikasi **Mihon / Tachiyomi / Komikku / Dantotsu**.
 2. Masuk ke menu **More > Settings > Browse > Extension repositories / Edit repos > Add Repo**.
-3. Masukkan salah satu URL berikut:
+3. Masukkan URL berikut:
    ```text
-   https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.min.json
+   https://raw.githubusercontent.com/wdinrev/sei-repo/main/index.min.json
    ```
-   *(Atau format Protobuf modern: `https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.pb`)*
+   *(Atau format Protobuf: `https://raw.githubusercontent.com/wdinrev/sei-repo/main/index.pb`)*
 
 ---
 
