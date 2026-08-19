@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⛩️ Sei Extensions (靜)
+# ☄️ Sei Extensions (靜)
 
 [![CI](https://github.com/wdinrev/sei-source/actions/workflows/build_push.yml/badge.svg)](https://github.com/wdinrev/sei-source/actions/workflows/build_push.yml)
 
