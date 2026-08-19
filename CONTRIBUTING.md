@@ -1,34 +1,34 @@
-# 📖 Panduan Kontribusi - Sei Extensions (靜)
+# ⛩️ Panduan Kontribusi - Sei Extensions (靜)
 
-Terima kasih atas minat Anda untuk berkontribusi pada **Sei**! Repositori ini khusus merawat dan mengembangkan ekstensi manga, manhwa, manhua, dan komik berbahasa Indonesia untuk Mihon, Tachiyomi, Komikku, Dantotsu, dan varian lainnya.
+Terima kasih atas minat Anda untuk berkontribusi pada Sei. Repositori ini khusus merawat dan mengembangkan ekstensi manga, manhwa, manhua, dan komik berbahasa Indonesia untuk Mihon, Tachiyomi, Komikku, dan Dantotsu.
 
 ---
 
-## 📋 Daftar Isi
-1. [Prasyarat](#-prasyarat)
-2. [Struktur Repositori](#-struktur-repositori)
-3. [Menulis Ekstensi Baru](#-menulis-ekstensi-baru)
+## Daftar Isi
+1. [Prasyarat](#prasyarat)
+2. [Struktur Repositori](#struktur-repositori)
+3. [Menulis Ekstensi Baru](#menulis-ekstensi-baru)
    - [Struktur Folder](#1-struktur-folder)
-   - [Konfigurasi `build.gradle.kts`](#2-konfigurasi-buildgradlekts)
-   - [Kelas Utama (`ParsedHttpSource`)](#3-kelas-utama-parsedhttpsource)
-   - [Multi-Source Themes (`lib-multisrc`)](#4-multi-source-themes-lib-multisrc)
-4. [Penanganan Konten Dewasa (NSFW)](#-penanganan-konten-dewasa-nsfw)
-5. [Testing & Build Lokal](#-testing--build-lokal)
-6. [Aturan Versi (*Version Bumping*)](#-aturan-versi-version-bumping)
-7. [Membuat Pull Request](#-membuat-pull-request)
+   - [Konfigurasi build.gradle.kts](#2-konfigurasi-buildgradlekts)
+   - [Kelas Utama (ParsedHttpSource)](#3-kelas-utama-parsedhttpsource)
+   - [Multi-Source Themes (lib-multisrc)](#4-multi-source-themes-lib-multisrc)
+4. [Penanganan Konten Dewasa (NSFW)](#penanganan-konten-dewasa-nsfw)
+5. [Testing & Build Lokal](#testing--build-lokal)
+6. [Aturan Versi](#aturan-versi)
+7. [Membuat Pull Request](#membuat-pull-request)
 
 ---
 
-## 🛠️ Prasyarat
+## Prasyarat
 Sebelum mulai mengembangkan ekstensi, pastikan Anda telah menginstal:
-* **Java Development Kit (JDK) 17** (Temurin / OpenJDK 17).
-* **Android SDK** (API Level 34+).
-* **Android Studio** atau **VS Code** dengan ekstensi Kotlin & Gradle.
-* **Git**.
+* Java Development Kit (JDK) 17 (Temurin / OpenJDK 17).
+* Android SDK (API Level 34+).
+* Android Studio atau VS Code dengan ekstensi Kotlin & Gradle.
+* Git.
 
 ---
 
-## 📂 Struktur Repositori
+## Struktur Repositori
 
 ```text
 sei-source/
@@ -45,7 +45,7 @@ sei-source/
 
 ---
 
-## ✍️ Menulis Ekstensi Baru
+## Menulis Ekstensi Baru
 
 ### 1. Struktur Folder
 Setiap ekstensi berada di dalam direktori `src/id/<nama-sumber>/`:
@@ -64,7 +64,7 @@ src/id/contoh/
     └── Filters.kt   (opsional)
 ```
 
-### 2. Konfigurasi `build.gradle.kts`
+### 2. Konfigurasi build.gradle.kts
 Contoh konfigurasi standar Kotlin DSL:
 
 ```kotlin
@@ -81,7 +81,7 @@ ext {
 }
 ```
 
-### 3. Kelas Utama (`ParsedHttpSource` / `HttpSource`)
+### 3. Kelas Utama (ParsedHttpSource / HttpSource)
 Implementasi dasar scraper manga:
 
 ```kotlin
@@ -131,15 +131,14 @@ class ContohKomik : ParsedHttpSource() {
 }
 ```
 
-### 4. Multi-Source Themes (`lib-multisrc`)
-Banyak website komik Indonesia menggunakan template WordPress yang sama (misalnya tema **MangaThemesia**, **Madara**, atau **FTSys**). 
-Jika website target menggunakan salah satu tema tersebut:
-* Cukup daftarkan ekstensi Anda di file tema terkait di dalam `lib-multisrc/<nama-tema>/` tanpa perlu menulis kode scraper HTML dari awal.
+### 4. Multi-Source Themes (lib-multisrc)
+Banyak website komik Indonesia menggunakan template WordPress yang sama (misalnya tema MangaThemesia, Madara, atau FTSys). 
+Jika website target menggunakan salah satu tema tersebut, cukup daftarkan ekstensi Anda di file tema terkait di dalam `lib-multisrc/<nama-tema>/` tanpa perlu menulis kode scraper HTML dari awal.
 
 ---
 
-## 🔞 Penanganan Konten Dewasa (NSFW)
-Ekstensi yang menyediakan konten dewasa (18+ / Doujin / Pornhwa) **wajib** mencantumkan:
+## Penanganan Konten Dewasa (NSFW)
+Ekstensi yang menyediakan konten dewasa (18+ / Doujin / Pornhwa) wajib mencantumkan:
 ```kotlin
 ext {
     ...
@@ -149,7 +148,7 @@ ext {
 
 ---
 
-## 🧪 Testing & Build Lokal
+## Testing & Build Lokal
 
 Untuk menguji apakah ekstensi Anda bisa di-compile tanpa error:
 
@@ -163,19 +162,19 @@ Untuk menguji apakah ekstensi Anda bisa di-compile tanpa error:
 File APK hasil build lokal akan berada di:
 `src/id/<nama-ekstensi>/build/outputs/apk/debug/<nama-ekstensi>-debug.apk`
 
-Anda dapat menginstal file APK tersebut langsung ke HP / Emulator Android untuk menguji bacaan chapter di aplikasi Mihon / Komikku.
+Anda dapat menginstal file APK tersebut langsung ke HP atau Emulator Android untuk menguji bacaan chapter di aplikasi Mihon, Komikku, Tachiyomi, atau Dantotsu.
 
 ---
 
-## 🔢 Aturan Versi (*Version Bumping*)
+## Aturan Versi
 
-Ketika Anda melakukan perbaikan (*bugfix*) atau pembaruan domain:
-1. **Wajib menaikkan `extVersionCode` sebanyak +1** pada `build.gradle.kts` ekstensi terkait.
-2. Mihon / Tachiyomi akan mendeteksi perubahan ini dan menampilkan tombol **"Update"** kepada pengguna.
+Ketika Anda melakukan perbaikan atau pembaruan domain:
+1. Wajib menaikkan `extVersionCode` sebanyak +1 pada `build.gradle.kts` ekstensi terkait.
+2. Mihon / Tachiyomi akan mendeteksi perubahan ini dan menampilkan tombol Update kepada pengguna.
 
 ---
 
-## 🚀 Membuat Pull Request (PR)
+## Membuat Pull Request
 
 1. Buat branch baru dari `main`:
    ```bash
@@ -186,4 +185,4 @@ Ketika Anda melakukan perbaikan (*bugfix*) atau pembaruan domain:
    * `fix(id/xyz): update baseUrl and fix image extraction`
 3. Pastikan `./gradlew spotlessApply` sudah dijalankan sebelum commit.
 4. Buka Pull Request ke repository `wdinrev/sei-source` branch `main`.
-5. CI akan otomatis memverifikasi build ekstensi Anda!
+5. CI akan otomatis memverifikasi build ekstensi Anda.
