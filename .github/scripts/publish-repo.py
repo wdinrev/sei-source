@@ -189,6 +189,7 @@ final_extensions.sort(key=lambda ext: ext.packageName)
 index = index_pb2.Index(
     name="Sei",
     badgeLabel="SEI",
+    signingKey="c0756f0cbbd5755afa1fd08a4c1a0ef795deadf9abeb156cf091eced628989d6",
     contact=index_pb2.Contact(
         website="https://github.com/wdinrev/sei-repo",
     ),
@@ -232,6 +233,14 @@ for ext in final_extensions:
     })
 with REPO_DIR.joinpath("index.min.json").open("w", encoding="utf-8") as f:
     json.dump(min_json_data, f, ensure_ascii=False, separators=(",", ":"))
+repo_meta = {
+    "name": "Sei",
+    "shortName": "SEI",
+    "website": "https://github.com/wdinrev/sei-source",
+    "signingKeyFingerprint": "c0756f0cbbd5755afa1fd08a4c1a0ef795deadf9abeb156cf091eced628989d6",
+}
+with REPO_DIR.joinpath("repo.json").open("w", encoding="utf-8") as repo_file:
+    json.dump(repo_meta, repo_file, ensure_ascii=False, indent=2)
 with release_assets_path.open("w", encoding="utf-8") as f:
     json.dump(updated_release_assets, f, indent=2, sort_keys=True)
     f.write("\n")
