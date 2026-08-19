@@ -1,30 +1,37 @@
-# 📖 Sei Extensions (靜)
-
 <div align="center">
 
+# 📖 Sei Extensions (靜)
+
+[![Install on Mihon](https://img.shields.io/badge/Install%20on-Mihon-2E7D32?style=for-the-badge&logo=android)](https://intradeus.github.io/http-protocol-redirector/?r=mihon://add-repo?url=https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.min.json)
+[![Install on Komikku](https://img.shields.io/badge/Install%20on-Komikku-1565C0?style=for-the-badge&logo=android)](https://intradeus.github.io/http-protocol-redirector/?r=komikku://add-repo?url=https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.min.json)
+[![Install on Tachiyomi](https://img.shields.io/badge/Install%20on-Tachiyomi-00838F?style=for-the-badge&logo=android)](https://intradeus.github.io/http-protocol-redirector/?r=tachiyomi://add-repo?url=https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.min.json)
 [![CI](https://github.com/wdinrev/sei-source/actions/workflows/build_push.yml/badge.svg)](https://github.com/wdinrev/sei-source/actions/workflows/build_push.yml)
 
-**Repository Ekstensi Manga / Manhwa / Doujin Khusus Sumber Indonesia untuk Mihon, Tachiyomi, Komikku, & Dantotsu.**
+**Katalog Repositori Ekstensi Manga / Manhwa / Doujin Khusus Bahasa Indonesia untuk Mihon, Tachiyomi, Komikku, & Dantotsu.**
 
 </div>
 
 ---
 
-## 📥 Cara Menambahkan Repo
+## 📥 Cara Menambahkan Repositori
 
-Di aplikasi Anda (Mihon / Tachiyomi / Komikku / Dantotsu), masuk ke:
-**Settings > Browse > Extension repositories > Add Repository**
-
-Salin dan tempel URL berikut:
-```text
-https://raw.githubusercontent.com/wdinrev/sei-repo/main/index.min.json
-```
-
-*(Atau jika aplikasi Anda menggunakan format Protobuf modern: `https://raw.githubusercontent.com/wdinrev/sei-repo/main/index.pb`)*
+### Opsi 1: Satu Klik (Otomatis)
+Klik salah satu tombol badge di atas (*Install on Mihon*, *Komikku*, atau *Tachiyomi*) langsung dari browser HP Anda.
 
 ---
 
-## 🧩 Sumber yang Tersedia (Indonesian Sources)
+### Opsi 2: Manual (Salin URL)
+1. Buka aplikasi **Mihon / Tachiyomi / Komikku / Dantotsu**.
+2. Masuk ke menu **More > Settings > Browse > Extension repositories / Edit repos > Add Repo**.
+3. Masukkan salah satu URL berikut:
+   ```text
+   https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.min.json
+   ```
+   *(Atau format Protobuf modern: `https://raw.githubusercontent.com/wdinrev/sei-repo/repo/index.pb`)*
+
+---
+
+## 🧩 Sumber yang Tersedia (Indonesian Manga Sources)
 
 Katalog lengkap berisi 80+ sumber komik, manga, manhwa, dan doujin berbahasa Indonesia (KomikIndo, Kiryuu, WestManga, Mangaku, Komiku, Komikcast, Doujindesu, dll.).
 
@@ -32,12 +39,7 @@ Katalog lengkap berisi 80+ sumber komik, manga, manhwa, dan doujin berbahasa Ind
 
 ## 🛠️ Pengembangan & Kontribusi
 
-1. Pastikan terinstall JDK 17 dan Android SDK.
-2. Buat ekstensi baru di folder `src/id/<nama-sumber>`.
-3. Jalankan build lokal:
-   ```bash
-   ./gradlew :src:id:<nama-sumber>:assembleDebug
-   ```
+Silakan baca panduan lengkap di [**CONTRIBUTING.md**](CONTRIBUTING.md) untuk cara menulis, menguji, dan menambahkan ekstensi baru.
 
 ---
 

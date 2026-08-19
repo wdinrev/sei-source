@@ -239,11 +239,7 @@ repo_meta = {
         "shortName": "Sei",
         "website": "https://github.com/wdinrev/sei-source",
         "signingKeyFingerprint": "c0756f0cbbd5755afa1fd08a4c1a0ef795deadf9abeb156cf091eced628989d6",
-    },
-    "name": "Sei",
-    "shortName": "Sei",
-    "website": "https://github.com/wdinrev/sei-source",
-    "signingKeyFingerprint": "c0756f0cbbd5755afa1fd08a4c1a0ef795deadf9abeb156cf091eced628989d6",
+    }
 }
 with REPO_DIR.joinpath("repo.json").open("w", encoding="utf-8") as repo_file:
     json.dump(repo_meta, repo_file, ensure_ascii=False, indent=2)
